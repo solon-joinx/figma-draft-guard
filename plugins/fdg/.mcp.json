@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "guard": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"],
+      "env": { "FDG_TOKEN": "${user_config.figma_token}" }
+    }
+  }
+}

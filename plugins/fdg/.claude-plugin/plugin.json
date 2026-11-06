@@ -1,0 +1,15 @@
+{
+  "name": "fdg",
+  "version": "0.1.0",
+  "description": "Warns Figwright users when the Figma main file changes, so they do not build from an outdated draft",
+  "userConfig": {
+    "figma_token": {
+      "type": "string",
+      "title": "Figma token",
+      "description": "Create one in Figma under Settings → Security → Personal access tokens. Only file_metadata:read is needed.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "types": "./types/index.d.ts"
+}

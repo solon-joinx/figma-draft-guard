@@ -1,0 +1,42 @@
+{
+  "modules": [
+    "./band.tsx"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/dist/hook.mjs\" session-start",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__figwright__(get_.*|search_nodes|scan_.*|save_.*|export_.*|design_diff|component_map|token_map|icon_map)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/dist/hook.mjs\" pre-tool-use",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__figwright__get_design_context",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/dist/hook.mjs\" post-tool-use",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "figma-draft-guard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "build": "esbuild plugins/fdg/src/hook.ts plugins/fdg/src/server.ts --bundle --platform=node --format=esm --target=node20 --outdir=plugins/fdg/dist --out-extension:.js=.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test 'plugins/fdg/test/*.test.ts'",
+    "check": "npm run typecheck && npm test && claude plugin validate plugins/fdg"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  }
+}

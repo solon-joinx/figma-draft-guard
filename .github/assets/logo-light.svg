@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="figma-draft-guard">
+  <defs>
+    <mask id="gap">
+      <rect width="128" height="128" fill="#fff"/>
+      <rect x="10" y="30" width="88" height="88" rx="20" fill="#000"/>
+      <circle cx="94" cy="34" r="15" fill="#000"/>
+    </mask>
+    <mask id="dot-gap">
+      <rect width="128" height="128" fill="#fff"/>
+      <circle cx="94" cy="34" r="15" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="34" y="14" width="80" height="80" rx="16" fill="none" stroke="#94A3B8" stroke-width="6" mask="url(#gap)"/>
+  <rect x="14" y="34" width="80" height="80" rx="16" fill="#111827" mask="url(#dot-gap)"/>
+  <g transform="translate(54 75) scale(.86) translate(-58 -79.500)" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 54.5c-5-1.500-8 1-8 6.500v29"/>
+    <path d="M24 68.500h12"/>
+    <circle cx="52" cy="79" r="10.500"/>
+    <path d="M62.500 54.500v35"/>
+    <circle cx="81.500" cy="79" r="10.500"/>
+    <path d="M92 68.500v29c0 6-4 9-10 9-3.500 0-6.500-1-8.500-3"/>
+  </g>
+  <circle cx="94" cy="34" r="10" fill="#F59E0B"/>
+</svg>

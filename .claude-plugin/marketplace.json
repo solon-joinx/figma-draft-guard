@@ -1,0 +1,13 @@
+{
+  "name": "figma-draft-guard-marketplace",
+  "owner": {
+    "name": "SolonLin"
+  },
+  "plugins": [
+    {
+      "name": "fdg",
+      "source": "./plugins/fdg",
+      "description": "Warns Figwright users when the Figma main file changes, so they do not build from an outdated draft"
+    }
+  ]
+}
